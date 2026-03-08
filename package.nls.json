@@ -39,7 +39,7 @@
   "config.title": "How It Works",
   "config.ai.provider.description": "AI provider used when generating a new explanation.",
   "config.ai.model.description": "Model identifier for the selected provider.",
-  "config.ai.baseUrl.description": "Optional custom base URL. Leave empty to use the provider default.",
+  "config.ai.baseUrl.description": "Optional custom base URL. Leave empty to use the provider default. OpenAI custom URLs are only applied from User settings and must use HTTPS.",
   "config.ai.temperature.description": "Sampling temperature for the model.",
   "config.ai.maxSourceCharacters.description": "Maximum number of source characters sent to the model.",
   "config.ai.language.description": "Language to write the explanations in. Set to 'Auto' to let the AI decide based on context.",

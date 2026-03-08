@@ -8,6 +8,7 @@ This is the shortest path to get value from the extension.
 2. Run: `How It Works: Quick Setup (Full Configuration)`.
 3. Complete the wizard:
    `AI provider`, `AI model`, `Base URL`, `Temperature`, `Max source characters`, `Explanation language`, and `API key` if needed.
+   For `openai`, custom base URLs are only applied from User settings and must use `https://`.
 
 ## 2. Pick An Explanation Language
 
@@ -36,6 +37,7 @@ Supported options:
 ## 4. Understand Cache Behavior
 
 - Explanations are saved under `.vscode/ai-docs`.
+- The generated cache should normally stay out of Git.
 - If cache exists, opening is immediate.
 - If cache does not exist, the extension generates a new explanation.
 - If the cache exists in another language, the Explorer menu offers `Regenerate and read (XX)`.

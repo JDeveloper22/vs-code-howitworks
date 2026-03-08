@@ -94,7 +94,7 @@ The Explorer menu changes automatically depending on cache state and selected la
 
 - Use a low `temperature` (`0.1` to `0.3`) for more consistent explanations.
 - Increase `maxSourceCharacters` for larger files.
-- Commit `.vscode/ai-docs` if you want to share explanations with your team.
+- Keep `.vscode/ai-docs` out of Git unless you intentionally want to publish generated explanations.
 - If you prefer local/private execution, use `ollama` with a local model.
 
 ## Configuration
@@ -103,7 +103,7 @@ You can configure all of these settings from the setup wizard or directly in VS 
 
 - `howItWorks.ai.provider`: `openai` or `ollama`
 - `howItWorks.ai.model`: model identifier
-- `howItWorks.ai.baseUrl`: optional custom endpoint
+- `howItWorks.ai.baseUrl`: optional custom endpoint. For `openai`, only User-level values are applied and they must use `https://`.
 - `howItWorks.ai.temperature`: from `0` to `2`
 - `howItWorks.ai.maxSourceCharacters`: minimum `1000`
 - `howItWorks.ai.language`: output language (`Auto`, `Spanish`, `English`, etc.)
@@ -127,6 +127,7 @@ You can configure all of these settings from the setup wizard or directly in VS 
 
 - Requires an API key.
 - Default base URL: `https://api.openai.com/v1`.
+- Custom endpoints are only honored from User settings and must use `https://`.
 - Ideal when you want hosted models and do not mind external API calls.
 
 ### Ollama

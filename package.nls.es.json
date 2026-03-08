@@ -39,7 +39,7 @@
   "config.title": "How It Works",
   "config.ai.provider.description": "Proveedor de IA a usar cuando se genera una nueva explicación.",
   "config.ai.model.description": "Identificador del modelo para el proveedor seleccionado.",
-  "config.ai.baseUrl.description": "URL base personalizada opcional. Dejar vacío para el valor por defecto del proveedor.",
+  "config.ai.baseUrl.description": "URL base personalizada opcional. Déjala vacía para usar el valor por defecto del proveedor. Las URLs personalizadas de OpenAI solo se aplican desde la configuración de usuario y deben usar HTTPS.",
   "config.ai.temperature.description": "Temperatura de sampleo del modelo.",
   "config.ai.maxSourceCharacters.description": "Número máximo de caracteres del código fuente enviados al modelo.",
   "config.ai.language.description": "Idioma en el que se generarán las explicaciones. Usa 'Auto' para que la IA decida según el contexto.",

@@ -8,6 +8,7 @@ import {
 import { ISecretsService } from "../../domain/ports/ISecretsService";
 import { PromptBuilder } from "./PromptBuilder";
 import { SECRET_KEYS } from "../../shared/constants/configurationKeys";
+import { buildOpenAiChatCompletionsEndpoint } from "./buildOpenAiChatCompletionsEndpoint";
 
 interface OpenAiResponseContentPart {
   text?: string;
@@ -73,7 +74,7 @@ export class OpenAiService implements IAiService {
       settings.maxSourceCharacters,
       settings.language,
     );
-    const endpoint = `${this.normalizeBaseUrl(settings.baseUrl, "https://api.openai.com/v1")}/chat/completions`;
+    const endpoint = buildOpenAiChatCompletionsEndpoint(settings.baseUrl);
 
     const response = await fetch(endpoint, {
       method: "POST",
@@ -136,10 +137,5 @@ export class OpenAiService implements IAiService {
     }
 
     return "";
-  }
-
-  private normalizeBaseUrl(baseUrl: string | undefined, fallback: string): string {
-    const candidate = (baseUrl ?? fallback).trim();
-    return candidate.replace(/\/+$/, "");
   }
 }
