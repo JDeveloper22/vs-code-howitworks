@@ -1,0 +1,855 @@
+{
+  "name": "how-it-works",
+  "displayName": "%extension.displayName%",
+  "description": "%extension.description%",
+  "version": "0.1.0",
+  "publisher": "juandgarin",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JDeveloper22/vs-code-howitworks.git"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "ai",
+    "code-explainer",
+    "documentation",
+    "onboarding",
+    "ollama",
+    "openai"
+  ],
+  "l10n": "./l10n",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "howItWorks.explainFile",
+        "title": "%command.explainFile%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.explainFile.auto",
+        "title": "%command.generateAndRead.auto%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.explainFile.en",
+        "title": "%command.generateAndRead.en%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.explainFile.es",
+        "title": "%command.generateAndRead.es%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.explainFile.fr",
+        "title": "%command.generateAndRead.fr%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.explainFile.de",
+        "title": "%command.generateAndRead.de%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.explainFile.it",
+        "title": "%command.generateAndRead.it%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.explainFile.pt",
+        "title": "%command.generateAndRead.pt%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.explainFile.zh",
+        "title": "%command.generateAndRead.zh%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.explainFile.ja",
+        "title": "%command.generateAndRead.ja%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.explainFile.ko",
+        "title": "%command.generateAndRead.ko%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.readExplanation.auto",
+        "title": "%command.readExplanation.auto%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.readExplanation.en",
+        "title": "%command.readExplanation.en%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.readExplanation.es",
+        "title": "%command.readExplanation.es%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.readExplanation.fr",
+        "title": "%command.readExplanation.fr%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.readExplanation.de",
+        "title": "%command.readExplanation.de%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.readExplanation.it",
+        "title": "%command.readExplanation.it%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.readExplanation.pt",
+        "title": "%command.readExplanation.pt%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.readExplanation.zh",
+        "title": "%command.readExplanation.zh%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.readExplanation.ja",
+        "title": "%command.readExplanation.ja%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.readExplanation.ko",
+        "title": "%command.readExplanation.ko%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.setApiKey",
+        "title": "%command.setApiKey%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.setupExtension",
+        "title": "%command.setupExtension%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.setLanguage",
+        "title": "%command.setLanguage%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.setLanguage.auto",
+        "title": "%command.setLanguage.auto%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.setLanguage.en",
+        "title": "%command.setLanguage.en%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.setLanguage.es",
+        "title": "%command.setLanguage.es%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.setLanguage.fr",
+        "title": "%command.setLanguage.fr%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.setLanguage.de",
+        "title": "%command.setLanguage.de%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.setLanguage.it",
+        "title": "%command.setLanguage.it%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.setLanguage.pt",
+        "title": "%command.setLanguage.pt%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.setLanguage.zh",
+        "title": "%command.setLanguage.zh%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.setLanguage.ja",
+        "title": "%command.setLanguage.ja%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.setLanguage.ko",
+        "title": "%command.setLanguage.ko%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.regenerateExplanation",
+        "title": "%command.regenerateExplanation%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.regenerateExplanation.auto",
+        "title": "%command.regenerateExplanation.auto%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.regenerateExplanation.en",
+        "title": "%command.regenerateExplanation.en%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.regenerateExplanation.es",
+        "title": "%command.regenerateExplanation.es%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.regenerateExplanation.fr",
+        "title": "%command.regenerateExplanation.fr%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.regenerateExplanation.de",
+        "title": "%command.regenerateExplanation.de%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.regenerateExplanation.it",
+        "title": "%command.regenerateExplanation.it%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.regenerateExplanation.pt",
+        "title": "%command.regenerateExplanation.pt%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.regenerateExplanation.zh",
+        "title": "%command.regenerateExplanation.zh%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.regenerateExplanation.ja",
+        "title": "%command.regenerateExplanation.ja%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.regenerateExplanation.ko",
+        "title": "%command.regenerateExplanation.ko%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.regenerateAndReadExplanation.auto",
+        "title": "%command.regenerateAndReadExplanation.auto%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.regenerateAndReadExplanation.en",
+        "title": "%command.regenerateAndReadExplanation.en%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.regenerateAndReadExplanation.es",
+        "title": "%command.regenerateAndReadExplanation.es%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.regenerateAndReadExplanation.fr",
+        "title": "%command.regenerateAndReadExplanation.fr%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.regenerateAndReadExplanation.de",
+        "title": "%command.regenerateAndReadExplanation.de%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.regenerateAndReadExplanation.it",
+        "title": "%command.regenerateAndReadExplanation.it%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.regenerateAndReadExplanation.pt",
+        "title": "%command.regenerateAndReadExplanation.pt%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.regenerateAndReadExplanation.zh",
+        "title": "%command.regenerateAndReadExplanation.zh%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.regenerateAndReadExplanation.ja",
+        "title": "%command.regenerateAndReadExplanation.ja%",
+        "category": "%config.title%"
+      },
+      {
+        "command": "howItWorks.regenerateAndReadExplanation.ko",
+        "title": "%command.regenerateAndReadExplanation.ko%",
+        "category": "%config.title%"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "howItWorks.explainFile",
+          "when": "resourceScheme == file && !howItWorks.languageTag",
+          "group": "navigation@49"
+        },
+        {
+          "command": "howItWorks.explainFile.auto",
+          "when": "resourceScheme == file && !howItWorks.hasExplanation && howItWorks.languageTag == 'AUTO'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.explainFile.en",
+          "when": "resourceScheme == file && !howItWorks.hasExplanation && howItWorks.languageTag == 'EN'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.explainFile.es",
+          "when": "resourceScheme == file && !howItWorks.hasExplanation && howItWorks.languageTag == 'ES'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.explainFile.fr",
+          "when": "resourceScheme == file && !howItWorks.hasExplanation && howItWorks.languageTag == 'FR'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.explainFile.de",
+          "when": "resourceScheme == file && !howItWorks.hasExplanation && howItWorks.languageTag == 'DE'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.explainFile.it",
+          "when": "resourceScheme == file && !howItWorks.hasExplanation && howItWorks.languageTag == 'IT'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.explainFile.pt",
+          "when": "resourceScheme == file && !howItWorks.hasExplanation && howItWorks.languageTag == 'PT'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.explainFile.zh",
+          "when": "resourceScheme == file && !howItWorks.hasExplanation && howItWorks.languageTag == 'ZH'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.explainFile.ja",
+          "when": "resourceScheme == file && !howItWorks.hasExplanation && howItWorks.languageTag == 'JA'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.explainFile.ko",
+          "when": "resourceScheme == file && !howItWorks.hasExplanation && howItWorks.languageTag == 'KO'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.readExplanation.auto",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && !howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'AUTO'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.readExplanation.en",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && !howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'EN'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.readExplanation.es",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && !howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'ES'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.readExplanation.fr",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && !howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'FR'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.readExplanation.de",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && !howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'DE'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.readExplanation.it",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && !howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'IT'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.readExplanation.pt",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && !howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'PT'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.readExplanation.zh",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && !howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'ZH'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.readExplanation.ja",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && !howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'JA'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.readExplanation.ko",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && !howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'KO'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.regenerateExplanation.auto",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && !howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'AUTO'",
+          "group": "navigation@51"
+        },
+        {
+          "command": "howItWorks.regenerateExplanation.en",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && !howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'EN'",
+          "group": "navigation@51"
+        },
+        {
+          "command": "howItWorks.regenerateExplanation.es",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && !howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'ES'",
+          "group": "navigation@51"
+        },
+        {
+          "command": "howItWorks.regenerateExplanation.fr",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && !howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'FR'",
+          "group": "navigation@51"
+        },
+        {
+          "command": "howItWorks.regenerateExplanation.de",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && !howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'DE'",
+          "group": "navigation@51"
+        },
+        {
+          "command": "howItWorks.regenerateExplanation.it",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && !howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'IT'",
+          "group": "navigation@51"
+        },
+        {
+          "command": "howItWorks.regenerateExplanation.pt",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && !howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'PT'",
+          "group": "navigation@51"
+        },
+        {
+          "command": "howItWorks.regenerateExplanation.zh",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && !howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'ZH'",
+          "group": "navigation@51"
+        },
+        {
+          "command": "howItWorks.regenerateExplanation.ja",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && !howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'JA'",
+          "group": "navigation@51"
+        },
+        {
+          "command": "howItWorks.regenerateExplanation.ko",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && !howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'KO'",
+          "group": "navigation@51"
+        },
+        {
+          "command": "howItWorks.readExplanation.auto",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'AUTO'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.readExplanation.en",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'EN'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.readExplanation.es",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'ES'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.readExplanation.fr",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'FR'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.readExplanation.de",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'DE'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.readExplanation.it",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'IT'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.readExplanation.pt",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'PT'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.readExplanation.zh",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'ZH'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.readExplanation.ja",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'JA'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.readExplanation.ko",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'KO'",
+          "group": "navigation@50"
+        },
+        {
+          "command": "howItWorks.regenerateAndReadExplanation.auto",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'AUTO'",
+          "group": "navigation@51"
+        },
+        {
+          "command": "howItWorks.regenerateAndReadExplanation.en",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'EN'",
+          "group": "navigation@51"
+        },
+        {
+          "command": "howItWorks.regenerateAndReadExplanation.es",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'ES'",
+          "group": "navigation@51"
+        },
+        {
+          "command": "howItWorks.regenerateAndReadExplanation.fr",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'FR'",
+          "group": "navigation@51"
+        },
+        {
+          "command": "howItWorks.regenerateAndReadExplanation.de",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'DE'",
+          "group": "navigation@51"
+        },
+        {
+          "command": "howItWorks.regenerateAndReadExplanation.it",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'IT'",
+          "group": "navigation@51"
+        },
+        {
+          "command": "howItWorks.regenerateAndReadExplanation.pt",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'PT'",
+          "group": "navigation@51"
+        },
+        {
+          "command": "howItWorks.regenerateAndReadExplanation.zh",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'ZH'",
+          "group": "navigation@51"
+        },
+        {
+          "command": "howItWorks.regenerateAndReadExplanation.ja",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'JA'",
+          "group": "navigation@51"
+        },
+        {
+          "command": "howItWorks.regenerateAndReadExplanation.ko",
+          "when": "resourceScheme == file && howItWorks.hasExplanation && howItWorks.explanationLanguageChanged && howItWorks.languageTag == 'KO'",
+          "group": "navigation@51"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "howItWorks.explainFile"
+        },
+        {
+          "command": "howItWorks.explainFile.auto",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.explainFile.en",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.explainFile.es",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.explainFile.fr",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.explainFile.de",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.explainFile.it",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.explainFile.pt",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.explainFile.zh",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.explainFile.ja",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.explainFile.ko",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.readExplanation.auto",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.readExplanation.en",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.readExplanation.es",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.readExplanation.fr",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.readExplanation.de",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.readExplanation.it",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.readExplanation.pt",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.readExplanation.zh",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.readExplanation.ja",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.readExplanation.ko",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.setApiKey"
+        },
+        {
+          "command": "howItWorks.setupExtension"
+        },
+        {
+          "command": "howItWorks.setLanguage",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.setLanguage.auto",
+          "when": "howItWorks.languageTag == 'AUTO'"
+        },
+        {
+          "command": "howItWorks.setLanguage.en",
+          "when": "howItWorks.languageTag == 'EN'"
+        },
+        {
+          "command": "howItWorks.setLanguage.es",
+          "when": "howItWorks.languageTag == 'ES'"
+        },
+        {
+          "command": "howItWorks.setLanguage.fr",
+          "when": "howItWorks.languageTag == 'FR'"
+        },
+        {
+          "command": "howItWorks.setLanguage.de",
+          "when": "howItWorks.languageTag == 'DE'"
+        },
+        {
+          "command": "howItWorks.setLanguage.it",
+          "when": "howItWorks.languageTag == 'IT'"
+        },
+        {
+          "command": "howItWorks.setLanguage.pt",
+          "when": "howItWorks.languageTag == 'PT'"
+        },
+        {
+          "command": "howItWorks.setLanguage.zh",
+          "when": "howItWorks.languageTag == 'ZH'"
+        },
+        {
+          "command": "howItWorks.setLanguage.ja",
+          "when": "howItWorks.languageTag == 'JA'"
+        },
+        {
+          "command": "howItWorks.setLanguage.ko",
+          "when": "howItWorks.languageTag == 'KO'"
+        },
+        {
+          "command": "howItWorks.regenerateExplanation.auto",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.regenerateExplanation.en",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.regenerateExplanation.es",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.regenerateExplanation.fr",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.regenerateExplanation.de",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.regenerateExplanation.it",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.regenerateExplanation.pt",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.regenerateExplanation.zh",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.regenerateExplanation.ja",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.regenerateExplanation.ko",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.regenerateAndReadExplanation.auto",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.regenerateAndReadExplanation.en",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.regenerateAndReadExplanation.es",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.regenerateAndReadExplanation.fr",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.regenerateAndReadExplanation.de",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.regenerateAndReadExplanation.it",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.regenerateAndReadExplanation.pt",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.regenerateAndReadExplanation.zh",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.regenerateAndReadExplanation.ja",
+          "when": "false"
+        },
+        {
+          "command": "howItWorks.regenerateAndReadExplanation.ko",
+          "when": "false"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "%config.title%",
+      "properties": {
+        "howItWorks.ai.provider": {
+          "type": "string",
+          "enum": [
+            "openai",
+            "ollama"
+          ],
+          "default": "openai",
+          "description": "%config.ai.provider.description%"
+        },
+        "howItWorks.ai.model": {
+          "type": "string",
+          "default": "gpt-4o-mini",
+          "description": "%config.ai.model.description%"
+        },
+        "howItWorks.ai.baseUrl": {
+          "type": "string",
+          "default": "",
+          "description": "%config.ai.baseUrl.description%"
+        },
+        "howItWorks.ai.temperature": {
+          "type": "number",
+          "default": 0.2,
+          "minimum": 0,
+          "maximum": 2,
+          "description": "%config.ai.temperature.description%"
+        },
+        "howItWorks.ai.maxSourceCharacters": {
+          "type": "number",
+          "default": 20000,
+          "minimum": 1000,
+          "description": "%config.ai.maxSourceCharacters.description%"
+        },
+        "howItWorks.ai.language": {
+          "type": "string",
+          "default": "Auto",
+          "enum": [
+            "Auto",
+            "English",
+            "Spanish",
+            "French",
+            "German",
+            "Italian",
+            "Portuguese",
+            "Chinese",
+            "Japanese",
+            "Korean"
+          ],
+          "description": "%config.ai.language.description%"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "test": "tsx --test test/**/*.test.ts"
+  },
+  "dependencies": {
+    "markdown-it": "^14.1.0"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^22.13.10",
+    "@types/vscode": "^1.97.0",
+    "@vscode/l10n-dev": "^0.0.35",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "webview.title": "webview.title",
+  "api.key.prompt.title": "api.key.prompt.title",
+  "api.key.prompt.placeholder": "api.key.prompt.placeholder",
+  "api.key.saved": "api.key.saved",
+  "error.no.active.editor": "error.no.active.editor",
+  "error.no.api.key": "error.no.api.key",
+  "command.setApiKey": "command.setApiKey"
+}
