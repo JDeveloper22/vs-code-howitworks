@@ -2,6 +2,10 @@
 
 All notable changes to the "How It Works" extension are documented in this file.
 
+## [0.1.1] - 2026-03-08
+
+- Release: Bumped the extension version to 0.1.1.
+
 ## [0.1.0] - 2026-03-08
 
 - Docs: Rewrote README and QUICKSTART to document the complete current feature set, setup flow, command behavior, supported languages, configuration, storage, and troubleshooting.
